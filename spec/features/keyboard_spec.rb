@@ -15,15 +15,13 @@ feature 'Developer testing if testing setup works' do
     end
   end
   
-  context "POST /tasks check if database cleaner is working" do
-    xit "creates task" do
+  context "Get /keyboards/1 check if selinium integration is working" do
+    it "displays a keyboard" do
+      keyboard = Keyboard.create(instrument_type: "piano")
       #this test needs a full rewrite to work in our keyboards context.  This is a good entry point for test driven development
-      visit keyboards_path
-      fill_in "New Task", :with => "mow lawn"
-      click_button "Add"
+      visit keyboard_path(keyboard)
       # save_and_open_page
-      page.should have_content("Successfully added task.")
-      page.should have_content("mow lawn")
+      page.should have_content("piano")
     end
   end
 end

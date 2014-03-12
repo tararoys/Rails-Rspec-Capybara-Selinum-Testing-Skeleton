@@ -362,3 +362,10 @@ ActionController::RoutingError (No route matches [GET] "/keyboard"):
   Rendered /Users/tlroys/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.4ms)
   Rendered /Users/tlroys/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (15.8ms)
   Rendered /Users/tlroys/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (85.3ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateKeyboards (20140312220135)
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (15.1ms)[0m  [1mCREATE TABLE "keyboards" ("id" serial primary key, "instrument_type" character varying(255), "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35mSQL (1.6ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20140312220135"]]
+  [1m[36m (1.0ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.3ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
