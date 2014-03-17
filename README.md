@@ -112,6 +112,11 @@ Once you are done writing up the issue, feel free to claim it.
 
 # Git: Working with Teams
 
+## A friendly reminder to make your teammates like you:  
+   1. NEVER merge your own pull requests.  Get a review. 
+   2. Commit early and often. 
+   3. Don't push to master. 
+
 Git is a distributed version control system. Every Git working directory is a full-fledged repository with complete history and full version tracking capabilities, not dependent on network access or a central server.
 
 ## Getting Started
