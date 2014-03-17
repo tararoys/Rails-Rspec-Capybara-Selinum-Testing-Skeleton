@@ -6,7 +6,7 @@ This assumes you have a Mac with OSX like I do.
 
 2. In the project directory, on the console, type 
     ```bash
-       rspec. 
+       rspec
     ```
      You will run into the following error:  
 
