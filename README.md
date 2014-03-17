@@ -1,3 +1,30 @@
+#About 
+
+Wouldn't it be nice if you didn't have to watch [this really helpful tutorial](http://railscasts.com/episodes/257-request-specs-and-capybara) on how to set up. 
+
+Why this setup?  
+
+Imagine that your rails app is a Rube Goldberg machine. In order for a Rube Goldberg machine to work, you need to make sure that 
+
+1. All of the individual parts work
+2. when you hook them all together, all of the combinations work. 
+
+You can test things to make sure they work.  
+
+1. Unit tests test individual parts of the Rube Goldberg machine.
+2. Integration tests tests that all of the individual combinations of parts still work together. 
+
+With this testing setup, 
+1. Rspec lets you unit test the individual parts of your application.
+2. Capybara and Selinium let you pretend to be a user and click through your web app, so that you can test that the combination of parts still work together. 
+
+##Why you should use this setup
+  1. You want to dive right into coding without tedious setup.
+  2. You have a lot of javascript and you want to actually click through it like a user would. 
+
+##Why you shouldn't use this setup
+  1. Doing integration tests with selinium is really really slow. Why?  Because selinium has to open firefox and actually click through your app to test it.  Doing integration tests with selinium is like building a house out of brick and wood. It takes awhile. Normally, you do your integeration tests with just capybara.  Capybara is like pitching a tent.  It only takes a couple of minutes.  
+
 #Setup: 
 
 This assumes you have a Mac with OSX like I do. 
