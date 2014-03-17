@@ -1,3 +1,50 @@
+#Setup: 
+
+This assumes you have a Mac with OSX like I do. 
+
+1. Clone the repository
+
+2. In the project directory, on the console, type 
+    ```bash
+       rspec. 
+    ```
+     You will run into the following error:  
+
+   ```bash 
+       in `initialize': FATAL:  database "my_keyboards_test" does not exist (PG::ConnectionBad)
+   ```
+3. That is your cue to run the command 
+
+    ```bash
+        rake db:create
+    ```
+    
+    This creates your database. 
+
+4. Run rspec again.  You will see the following error:  
+    ```
+        `check_pending!': Migrations are pending; run 'bin/rake db:migrate RAILS_ENV=test' to resolve this issue. (ActiveRecord::PendingMigrationError)
+    ```
+    This means that you have a database, but the database is not set up. 
+
+5. Do what it says, and run 
+
+    ```bash
+        bin/rake db:migrate RAILS_ENV=test
+    ```
+6. Then run rspec again.  You may see one final error:
+   ```bash
+     Selenium::WebDriver::Error::WebDriverError:
+       Could not find Firefox binary (os=macosx). Make sure Firefox is installed or set the path manually with Selenium::WebDriver::Firefox::Binary.path=
+    ```
+
+This means you need to install Firefox into your Applications Directory
+
+After that, the example test suite will run and you have successfully set up this project! 
+    
+
+
+
 # Git: Working with Teams
 
 Git is a distributed version control system. Every Git working directory is a full-fledged repository with complete history and full version tracking capabilities, not dependent on network access or a central server.
